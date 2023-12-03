@@ -2,7 +2,7 @@
 import { promises as fs } from 'fs'
 import { EOL } from 'os';
 
-const readFileToArray = async(filePath) => {
+const readFileToArray = async (filePath) => {
     try {
         const data = (await fs.readFile(filePath, 'utf8')).trim();
         return data.split(EOL);
@@ -11,7 +11,7 @@ const readFileToArray = async(filePath) => {
     }
 }
 
-const readFile = async(filePath) => {
+const readFile = async (filePath) => {
     try {
         return (await fs.readFile(filePath, 'utf8')).trim();
     } catch (err) {
